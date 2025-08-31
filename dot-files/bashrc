@@ -1,0 +1,4 @@
+
+# source aliases & helper functions
+source ~/_bin/dot-common/aliases.sh
+source ~/_bin/dot-common/help-functions.sh

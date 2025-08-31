@@ -1,0 +1,19 @@
+# Path to your oh-my-zsh installation.
+export ZSH=~/.oh-my-zsh
+
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="steeef"
+
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(themes z)
+
+# source oh-my-zsh
+source $ZSH/oh-my-zsh.sh
+
+# configure homebrew plugin installations
+source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+
+# source aliases & helper functions
+source ~/_bin/dot-common/aliases.sh
+source ~/_bin/dot-common/help-functions.sh

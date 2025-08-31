@@ -1,0 +1,50 @@
+# via https://www.toptal.com/developers/gitignore/
+
+# MacOS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Environment files
+.env
+.env.*
+
+# Laravel / PHP
+/vendor/
+/node_modules/
+/public/hot
+/public/storage
+/storage/*.key
+/.vagrant
+Homestead.yaml
+Homestead.json
+.phpunit.result.cache
+
+# --- Node.js ---
+/node_modules/
+/npm-debug.log*
+/yarn-error.log*
+/pnpm-debug.log*
+/dist/
+/build/
+/.cache/
+
+# Python / uv
+__pycache__/
+/*.py[cod]
+*.pyo
+.venv/
+dist/
+build/
+*.egg-info/
+.installed.cfg
+
+# Test / tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/

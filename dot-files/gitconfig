@@ -1,0 +1,20 @@
+[core]
+	excludesfile = ~/.gitignore
+	pager = delta
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    side-by-side = true
+    navigate = true    # use n and N to move between diff sections
+    light = false      # set to true if your terminal has a light background color
+[merge]
+    conflictstyle = diff3
+[help]
+	autocorrect = 20
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[include]
+	path = ~/.gitconfig.local
