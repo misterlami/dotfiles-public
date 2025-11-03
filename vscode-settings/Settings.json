@@ -1,0 +1,141 @@
+{
+    /**
+    * Miscellany (moi)
+    **/
+    "editor.guides.indentation": false,
+    "extensions.ignoreRecommendations": true,
+    "files.autoSave": "onFocusChange",
+    "files.exclude": {
+        "**/node_modules": true,
+        "**/vendor": true
+    },
+    "update.showReleaseNotes": false,
+    "window.confirmSaveUntitledWorkspace": false,
+    "workbench.colorTheme": "Mariana", //Mariana ⋮ New Moon
+    "workbench.iconTheme": "symbols",
+
+    /**
+    * Better Defaults
+    **/
+    "editor.copyWithSyntaxHighlighting": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.emptySelectionClipboard": false,
+    "workbench.editor.enablePreview": false,
+    "window.newWindowDimensions": "offset",
+    "editor.multiCursorModifier": "ctrlCmd",
+    "files.trimTrailingWhitespace": true,
+    "diffEditor.renderSideBySide": false,
+    "editor.snippetSuggestions": "top",
+    "editor.detectIndentation": false,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+
+    /**
+    * Hide Everything
+    **/
+    "workbench.activityBar.location": "top", //hidden ⋮ top
+    "workbench.sideBar.location": "right",
+    "workbench.statusBar.visible": false,
+    "workbench.editor.showTabs": "multiple", //none ⋮ multiple
+    "editor.minimap.enabled": false,
+    "editor.lineNumbers": "on", //off ⋮ on
+
+    /**
+    * Silence The Noise
+    */
+    "breadcrumbs.enabled": false,
+    "scm.diffDecorations": "none",
+    "editor.hover.enabled": false,
+    "editor.matchBrackets": "never",
+    "workbench.tips.enabled": false,
+    "editor.colorDecorators": false,
+    "git.decorations.enabled": false,
+    "workbench.startupEditor": "none",
+    "editor.lightbulb.enabled": "off",
+    "editor.selectionHighlight": false,
+    "editor.overviewRulerBorder": false,
+    "editor.renderLineHighlight": "none", //none ⋮ gutter ⋮ all
+    "editor.occurrencesHighlight": "off",
+    "problems.decorations.enabled": false,
+    "editor.renderControlCharacters": false,
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.gotoLocation.multipleReferences": "goto",
+    "editor.gotoLocation.multipleDefinitions": "goto",
+    "editor.gotoLocation.multipleDeclarations": "goto",
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "editor.gotoLocation.multipleImplementations": "goto",
+    "editor.gotoLocation.multipleTypeDefinitions": "goto",
+
+    /**
+    * Typography
+    **/
+    "editor.fontFamily": "jetbrains mono, hasklig",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 15,
+    "editor.lineHeight": 0,
+    "editor.suggestFontSize": 15,
+    "editor.suggestLineHeight": 28,
+    "terminal.integrated.fontFamily": "hasklig, jetbrains mono",
+    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.lineHeight": 1.5,
+
+    /**
+    * Find
+    **/
+    "search.useIgnoreFiles": false,
+    "search.exclude": {
+        "**/vendor": true,
+        "**/public": true,
+        "**/node_modules": true,
+        "**/dist": true,
+        "**/_ide_helper.php": true,
+        "**/composer.lock": true,
+        "**/package-lock.json": true,
+        "storage": true,
+        ".phpunit.result.cache": true
+    },
+
+    /**
+    * Code
+    **/
+    "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?", //include "-" in word selection.
+    "emmet.includeLanguages": {
+        "blade": "html",
+        "twig": "html",
+        "svelte": "html",
+        "javascript": "javascriptreact",
+        "typescript": "typescriptreact"
+    },
+    "files.associations": {
+        ".php_cs": "php"
+    },
+
+    /**
+    * PHP
+    **/
+    "[php]": {
+        "editor.defaultFormatter": "open-southeners.laravel-pint",
+        "editor.formatOnSave": true
+    },
+    "php.suggest.basic": false, //disable default vscode intellisense for php (use intelliphense)
+    "laravel-pint.enable": true,
+    "fiveServer.php.executable": "/opt/homebrew/bin/php",
+
+    /**
+    * HTML, CSS & JavaScript
+    **/
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features", //use default
+        "editor.formatOnSave": true
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "prettier.requireConfig": true,
+    "prettier.useEditorConfig": false,
+}
