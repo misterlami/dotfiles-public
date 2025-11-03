@@ -43,6 +43,23 @@ function recursively_delete_files_ending_with() {
     find . -name "*$1" -type f -delete
 }
 
+function set_forklift4_as_default_finder() {
+    defaults write -g NSFileViewer -string com.binarynights.ForkLift;
+    defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add '{LSHandlerContentType="public.folder";LSHandlerRoleAll="com.binarynights.ForkLift";}'
+    echo '***************************************************'
+    echo 'restart computer for forklift4 change to take place'
+    echo '***************************************************'
+
+}
+
+function unset_forklift4_as_default_finder() {
+    defaults delete -g NSFileViewer
+    defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers  -array-add '{LSHandlerContentType="public.folder";LSHandlerRoleAll="com.apple.finder";}'
+    echo '***************************************************'
+    echo 'restart computer for forklift4 change to take place'
+    echo '***************************************************'
+}
+
 function name_mac() {
     local MACNAME
 
@@ -92,9 +109,6 @@ function list_all_installs() {
     echo ''
     echo 'install_brew - installs homebrew'
     echo 'install_homebrew_apps - installs misc homebrew apps'
-    echo ''
-    echo 'install_node - installs nvm and node'
-    echo 'install_laravel - installs laravel'
     echo '=============================================================='
 }
 
@@ -103,6 +117,4 @@ function new_mac_setup() {
     install_brew
     install_homebrew_apps
     install_bin
-    install_node
-    install_laravel
 }

@@ -9,54 +9,50 @@ brew install zsh zsh-autosuggestions zsh-syntax-highlighting
 brew install ffmpeg yt-dlp
 
 # REPLs, dependency managers, fonts
-brew install psysh bpython
+brew install psysh ptpython
 brew install composer nvm uv
-brew install font-doto font-hasklig font-hack font-inter font-jetbrains-mono font-source-code-pro
+brew install font-inter font-doto font-hasklig font-jetbrains-mono
 brew install hugo
 
 # utilities
-brew install warp #iterm2 #ghostty
-brew install raycast #alfred
+brew install iterm2 warp
+brew install raycast
 brew install workflowy #obsidian #logseq
 
-brew install itsycal
-brew install moom
+brew install itsycal moom forklift
+brew install appcleaner elmedia-player imageoptim keka namechanger
+brew install displaylink flux-app
 
-brew install appcleaner
-brew install elmedia-player
-brew install imageoptim
-brew install keka
-brew install launchpad-manager
-brew install namechanger
-brew install superwhisper
-
-# cloud & web
-brew install microsoft-edge@beta #google-chrome@beta #opera
+# web
+brew install google-chrome #chatgpt-atlas #microsoft-edge #opera
+brew install microsoft-teams whatsapp zoom
+brew install cloudflare-warp tunnelbear
 
 # data tools
-brew install dbeaver-enterprise
-brew install dbngin #duckdb #clickhouse
-brew install transmit
+brew install dbeaver-community #duckdb #clickhouse
+brew install dbngin herd #transmit
 
 # dev tools
-brew install bruno #postman
-brew install sublime-merge
-brew install sublime-text visual-studio-code cursor #intellij-idea
-brew install cursor-cli codex gemini-cli
+brew install codex
+brew install bruno sublime-merge
+brew install figma figma-agent #affinity #canva
+brew install sublime-text visual-studio-code #intellij-idea
+brew install dotnet-sdk
 
 # devops tools
-brew install ansible
-#brew install colima docker docker-compose docker-credential-helper
-#brew install podman podman-compose
-#brew install utm
-#brew install vultr #awscli #azure-cli #google-cloud-sdk
+brew install ansible vultr #awscli #azure-cli
+brew install podman podman-compose podman-desktop #colima docker docker-compose docker-desktop
 
-# ML & AI
+# AI tools
 brew install ollama
-#brew install jupyterlab
+brew install superwhisper chatgpt
 
 # installs
 git lfs install
+nvm install --lts
+npm install -g fiveserver
+composer global require laravel/installer
+composer global require laravel/pint
 
 # cleanup
 brew cleanup --prune=all

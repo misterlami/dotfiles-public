@@ -32,8 +32,7 @@ alias ip2="curl ifconfig.co"
 alias p="ping -c 3"
 alias rmd="rm -rf" # delete directory
 alias serve="php -S localhost:8000" # use -t to specify different doc root
-alias bsync='browser-sync start --proxy "localhost:8000" --files "**/*.php, **/*.css, **/*.js" --no-ui --no-notify --browser "Safari"'
-alias sublime='open -a "Sublime Text"'
+alias fserve="five-server --php='/opt/homebrew/bin/php'"
 
 alias updatehosts="sudo bash -c 'cat ~/_ssh/hosts > /private/etc/hosts'"
 alias aliases="cc ~/_bin/dot-common/aliases.sh"
@@ -41,14 +40,12 @@ alias functionz="cc ~/_bin/dot-common/help-functions.sh"
 alias sourcebash="source ~/.bashrc"
 alias sourcezsh="source ~/.zshrc"
 alias install_bin="source ~/_bin/install.sh"
-alias install_ssh="source ~/_ssh/install.sh"
 alias install_brew='/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"'
-alias install_node="nvm install node && nvm alias default node"
-alias install_laravel="composer g require laravel/installer"
 
-# applications
+# repls
+alias py="ptpython"
+alias ph="psysh"
 alias art="php artisan"
-alias sail="sh $([ -f sail ] && echo sail || echo vendor/bin/sail)"
 
 # list globally installed packages
 alias clist="composer global show" # composer & php
@@ -68,7 +65,7 @@ alias gs="git status -sb"
 alias gl="git log --oneline --decorate --graph" #-5 (show commit messages)
 alias gl2="git log --oneline --decorate --graph --name-only" #-5 (show commit messages and files changed)
 alias gl3="git shortlog -s -n -e" # show contributors and their total # of commits
-alias gl4="git log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(60,trunc)%s (%cN, %cr) %Cred%d' --date-order" #whos been working on last 10 commits (basically who's working on what now)
+alias gl4="git log --graph -10 --branches --remotes --tags --format=format:'%Cgreen%h %Creset• %<(60,trunc)%s (%cN, %cr) %Cred%d' --date-order" #whos been working on last 10 commits (basically who's working on what now)
 alias ga="git add --all"
 alias gc="git commit -m"
 alias gp="git push"
@@ -80,14 +77,13 @@ alias grh="g reset --hard"
 # docker & podman
 alias d="docker"
 alias dc="docker-compose"
-alias pd="podman"
-alias pc="podman-compose"
+alias docker="podman"
+alias docker-compose="podman-compose"
 
 #miscellany
 alias vul=vultr
 
 ## paths ##
-export PATH="$PATH:$HOME/.composer/vendor/bin" #composer
-export NVM_DIR="$HOME/.nvm" && \
-  source "$(brew --prefix)/opt/nvm/nvm.sh" && \
-  source "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" #nvm
+export PATH="$HOME/.composer/vendor/bin:$PATH" #composer
+export PATH="$HOME/Library/Application Support/Herd/bin/":$PATH && export HERD_PHP_84_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/84/" #herd
+export NVM_DIR="$HOME/.nvm" && source "$(brew --prefix)/opt/nvm/nvm.sh" && source "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" #nvm
