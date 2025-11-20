@@ -15,6 +15,53 @@
         "command": "editor.action.deleteLines",
         "when": "editorTextFocus"
     },
+    {
+        "key": "cmd+k cmd+t",
+        "command": "smartTitleCase.apply",
+        "when": "editorHasSelection"
+    },
+
+    /**
+    * Toggle Font Size
+    **/
+    {
+        "key": "cmd+k cmd+k",
+        "command": "toggle",
+        "when": "editorTextFocus",
+        "args": {
+            "id": "fontSize",
+            "value": [
+                {
+                    "editor.fontSize": 15,
+                    "editor.lineHeight": 32
+                },
+                {
+                    "editor.fontSize": 15,
+                    "editor.lineHeight": 0
+                }
+            ]
+        }
+    },
+
+    /**
+    * Toggle Font Family
+    **/
+    {
+        "key": "cmd+k cmd+f",
+        "command": "toggle",
+        "when": "editorTextFocus",
+        "args": {
+            "id": "fontFamily",
+            "value": [
+                {
+                    "editor.fontFamily": "hasklig"
+                },
+                {
+                    "editor.fontFamily": "jetbrains mono"
+                }
+            ]
+        }
+    },
 
     /**
     * Panels
@@ -50,48 +97,6 @@
     {
         "key": "cmd+t",
         "command": "workbench.action.terminal.toggleTerminal"
-    },
-
-    /**
-    * Toggle Font Size
-    **/
-    {
-        "key": "cmd+k cmd+k",
-        "command": "toggle",
-        "when": "editorTextFocus",
-        "args": {
-            "id": "fontSize",
-            "value": [
-                {
-                    "editor.fontSize": 15,
-                    "editor.lineHeight": 30
-                },
-                {
-                    "editor.fontSize": 15,
-                    "editor.lineHeight": 0
-                }
-            ]
-        }
-    },
-
-    /**
-    * Toggle Font Family
-    **/
-    {
-        "key": "cmd+k cmd+f",
-        "command": "toggle",
-        "when": "editorTextFocus",
-        "args": {
-            "id": "fontFamily",
-            "value": [
-                {
-                    "editor.fontFamily": "jetbrains mono, hasklig",
-                },
-                {
-                    "editor.fontFamily": "hasklig, jetbrains mono",
-                }
-            ]
-        }
     },
 
     /**
@@ -263,4 +268,18 @@
         "command": "workbench.action.terminal.focusPreviousPane",
         "when": "terminalFocus"
     },
+
+    /**
+    * Easily search for Liverwire files
+    **/
+    {
+        "key": "cmd+k cmd+l",
+        "command": "workbench.action.quickOpen",
+        "args": "⚡︎",
+        "when": "!editorHasSelection"
+    },
+    {
+        "key": "cmd+k cmd+s",
+        "command": "editor.action.insertSnippet"
+    }
 ]

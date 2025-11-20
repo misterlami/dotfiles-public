@@ -3,15 +3,15 @@
 brew analytics off
 brew update && brew upgrade && brew cleanup
 
-brew install bat eza fd gh git git-lfs git-delta micro teleport
+brew install bat eza fd fzf ripgrep ast-grep gh git git-lfs git-delta micro teleport
 brew install btop gdu httpie wget
-brew install zsh zsh-autosuggestions zsh-syntax-highlighting
+brew install zoxide zsh zsh-autosuggestions zsh-syntax-highlighting
 brew install ffmpeg yt-dlp
 
 # REPLs, dependency managers, fonts
 brew install psysh ptpython
-brew install composer nvm uv
-brew install font-inter font-doto font-hasklig font-jetbrains-mono
+brew install composer nvm oven-sh/bun/bun uv
+brew install font-doto font-bevan font-hasklig font-jetbrains-mono
 brew install hugo
 
 # utilities
@@ -22,26 +22,31 @@ brew install workflowy #obsidian #logseq
 brew install itsycal moom forklift
 brew install appcleaner elmedia-player imageoptim keka namechanger
 brew install displaylink flux-app
+brew install google-drive
 
 # web
-brew install google-chrome #chatgpt-atlas #microsoft-edge #opera
+brew install google-chrome #microsoft-edge #opera #chatgpt-atlas
 brew install microsoft-teams whatsapp zoom
 brew install cloudflare-warp tunnelbear
 
+# design tools
+brew install figma figma-agent #affinity #obs
+
 # data tools
-brew install dbeaver-community #duckdb #clickhouse
-brew install dbngin herd #transmit
+brew install dbeaver-community #duckdb #chroma
+brew install transmit #mailpit #dbngin #herd
 
 # dev tools
 brew install codex
-brew install bruno sublime-merge
-brew install figma figma-agent #affinity #canva
-brew install sublime-text visual-studio-code #intellij-idea
+brew install sublime-merge bruno httpie-desktop
+brew install sublime-text visual-studio-code antigravity #intellij-idea
 brew install dotnet-sdk
 
 # devops tools
-brew install ansible vultr #awscli #azure-cli
-brew install podman podman-compose podman-desktop #colima docker docker-compose docker-desktop
+brew install ansible vultr awscli #azure-cli
+brew install podman podman-compose podman-desktop
+#brew install colima docker docker-compose docker-desktop
+#brew install crystalfetch utm
 
 # AI tools
 brew install ollama

@@ -2,16 +2,10 @@
     /**
     * Miscellany (moi)
     **/
-    "editor.guides.indentation": false,
-    "extensions.ignoreRecommendations": true,
+    "explorer.confirmDragAndDrop": false,
     "files.autoSave": "onFocusChange",
-    "files.exclude": {
-        "**/node_modules": true,
-        "**/vendor": true
-    },
     "update.showReleaseNotes": false,
-    "window.confirmSaveUntitledWorkspace": false,
-    "workbench.colorTheme": "Mariana", //Mariana ⋮ New Moon
+    "workbench.colorTheme": "Default Light Modern", //Mariana, New Moon, Default Light Modern
     "workbench.iconTheme": "symbols",
 
     /**
@@ -29,6 +23,12 @@
     "editor.detectIndentation": false,
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
+    "editor.guides.indentation": false,
+    "editor.stickyScroll.enabled": false,
+    "explorer.confirmDelete": false,
+    "extensions.ignoreRecommendations": true,
+    "window.confirmSaveUntitledWorkspace": false,
+
 
     /**
     * Hide Everything
@@ -38,7 +38,7 @@
     "workbench.statusBar.visible": false,
     "workbench.editor.showTabs": "multiple", //none ⋮ multiple
     "editor.minimap.enabled": false,
-    "editor.lineNumbers": "on", //off ⋮ on
+    "editor.lineNumbers": "on",
 
     /**
     * Silence The Noise
@@ -69,13 +69,13 @@
     /**
     * Typography
     **/
-    "editor.fontFamily": "jetbrains mono, hasklig",
+    "editor.fontFamily": "jetbrains mono",
     "editor.fontLigatures": true,
     "editor.fontSize": 15,
-    "editor.lineHeight": 0,
+    "editor.lineHeight": 32,
     "editor.suggestFontSize": 15,
     "editor.suggestLineHeight": 28,
-    "terminal.integrated.fontFamily": "hasklig, jetbrains mono",
+    "terminal.integrated.fontFamily": "hasklig",
     "terminal.integrated.fontSize": 15,
     "terminal.integrated.lineHeight": 1.5,
 
@@ -107,7 +107,8 @@
         "typescript": "typescriptreact"
     },
     "files.associations": {
-        ".php_cs": "php"
+        ".php_cs": "php",
+        "*.css": "tailwindcss"
     },
 
     /**
@@ -117,16 +118,15 @@
         "editor.defaultFormatter": "open-southeners.laravel-pint",
         "editor.formatOnSave": true
     },
-    "php.suggest.basic": false, //disable default vscode intellisense for php (use intelliphense)
     "laravel-pint.enable": true,
-    "fiveServer.php.executable": "/opt/homebrew/bin/php",
+    "php.suggest.basic": false,
 
     /**
     * HTML, CSS & JavaScript
     **/
     "[html]": {
-        "editor.defaultFormatter": "vscode.html-language-features", //use default
-        "editor.formatOnSave": true
+        "editor.defaultFormatter": "vscode.html-language-features", // esbenp.prettier-vscode ⋮ vscode.html-language-features
+        "editor.formatOnSave": true,
     },
     "[css]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -136,6 +136,15 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true
     },
+    "fiveServer.php.executable": "/opt/homebrew/bin/php",
     "prettier.requireConfig": true,
     "prettier.useEditorConfig": false,
+
+    /**
+    * Miscellany - Markdown etc.
+    **/
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+        "editor.formatOnSave": true
+    },
 }

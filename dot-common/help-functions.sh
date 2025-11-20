@@ -1,5 +1,6 @@
 ## functions ##
 
+# create a directory and switch into it
 function enter() {
     mkdir $1
     cd $1
@@ -37,27 +38,6 @@ function create_and_copy_ssh_key() {
 
     echo "** attempting to connect to $USER@$HOST to add your key as a known host **"
     cat ~/_ssh/keys/$HOST.pub | ssh $USER@$HOST "mkdir -p ~/.ssh && cat >>  ~/.ssh/authorized_keys"
-}
-
-function recursively_delete_files_ending_with() {
-    find . -name "*$1" -type f -delete
-}
-
-function set_forklift4_as_default_finder() {
-    defaults write -g NSFileViewer -string com.binarynights.ForkLift;
-    defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add '{LSHandlerContentType="public.folder";LSHandlerRoleAll="com.binarynights.ForkLift";}'
-    echo '***************************************************'
-    echo 'restart computer for forklift4 change to take place'
-    echo '***************************************************'
-
-}
-
-function unset_forklift4_as_default_finder() {
-    defaults delete -g NSFileViewer
-    defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers  -array-add '{LSHandlerContentType="public.folder";LSHandlerRoleAll="com.apple.finder";}'
-    echo '***************************************************'
-    echo 'restart computer for forklift4 change to take place'
-    echo '***************************************************'
 }
 
 function name_mac() {

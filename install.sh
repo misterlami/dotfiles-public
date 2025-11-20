@@ -1,20 +1,30 @@
 #!/bin/bash
 
-# backup files
 echo "Backing up dotfiles..."
 [ -f ~/.bashrc ] && mv -n ~/.bashrc ~/.bashrc_backup
 [ -f ~/.zshrc ] && mv -n ~/.zshrc ~/.zshrc_backup
+[ -f ~/.vimrc ] && mv -n ~/.vimrc ~/.vimrc_backup
 [ -f ~/.gitconfig ] && mv -n ~/.gitconfig ~/.gitconfig_backup
 [ -f ~/.gitignore ] && mv -n ~/.gitignore ~/.gitignore_backup
-[ -f ~/.vimrc ] && mv -n ~/.vimrc ~/.vimrc_backup
 
-# setup aliases (-f: remove existing file)
 echo "Aliasing dotfiles..."
 ln -sf ~/_bin/dot-files/bashrc ~/.bashrc
 ln -sf ~/_bin/dot-files/zshrc ~/.zshrc
+ln -sf ~/_bin/dot-files/vimrc ~/.vimrc
 ln -sf ~/_bin/dot-files/gitconfig ~/.gitconfig
 ln -sf ~/_bin/dot-files/gitignore ~/.gitignore
-ln -sf ~/_bin/dot-files/vimrc ~/.vimrc
+
+if command -v code >/dev/null 2>&1; then
+    # backup if original file exists, not symlink
+    [ -f "$HOME/Library/Application Support/Code/User/settings.json" ] && mv -n "$HOME/Library/Application Support/Code/User/settings.json" "$HOME/Library/Application Support/Code/User/settings.json_bkup"
+    [ -f "$HOME/Library/Application Support/Code/User/keybindings.json" ] && mv "$HOME/Library/Application Support/Code/User/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json_bkup"
+
+    echo "Aliasing vscode settings..."
+    ln -sf "$HOME/_bin/vscode-settings/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+    ln -sf "$HOME/_bin/vscode-settings/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
+else
+  echo "VS Code is not installed (code command not found)"
+fi
 
 # source rc file
 echo "Sourcing aliased dotfiles..."
